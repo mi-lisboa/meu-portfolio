@@ -1,19 +1,188 @@
 /*  CSS Externo*/
 
+
+/* defenir  as cores tena dark */
+/* raiz */
+:root,
+:root[data-theme='dark'] {
+    --cor-fundo: black;
+    --cor-texto: pink;
+    --cor-borda: rgb(253, 242, 242);
+
+    --menu-link: rgb(151, 10, 109);
+}
+
+:root[data-theme='light'] {
+    --cor-fundo: pink;
+    --cor-texto: black;
+    --cor-borda: rgb(253, 242, 242);
+    --menu-link: rgb(243, 109, 198);
+
+
+}
+
 body {
-    background: black;
+    background: var(--cor-fundo);
     /* cor fundo */
-    color: pink;
+    color: var(--cor-texto);
     /* cor textos  */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 a {
-    color: #940f82;
-text-decoration: none;
+    color: var(--menu-link);
+    text-decoration: none;
 }
 
 ul {
     list-style: none;
     /* estiço de lista */
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    width: 100%;
+    background: rgb(116, 89, 93);
+    border-bottom: 5px solid rgb(247, 239, 247);
+
+}
+
+.menu-desktop {
+    background: rgba(141, 51, 153, 0.233);
+    display: none;
+    /* esconde o menu desktop */
+}
+
+/* NAV  UL// OL */
+
+.menu {
+    display: flex;
+    /* em linha // horizontal  */
+    gap: 2rem;
+    /* 16px */
+    align-items: center;
+}
+
+/* LI-listas */
+.menu-item {
+    width: 100%;
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+}
+
+.menu-text {
+    color: var(--menu-link);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+/* ----Menu hamburguer botao menu mobile----- */
+#menuHamburger {
+    margin-left: 1rem;
+}
+
+.btn-menu-mobile {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--cor-texto);
+    display: flex;
+    font-size: 1.8rem;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.menu-mobile {
+    /* NAV */
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: var(--cor-fundo);
+    width: 75%;
+    height: 100vh;
+    /* viewPort Altura */
+    border-left: 1px solid var(--cor-borda);
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+    transition: .3s ease-in-out;
+    /* volta aqui */
+    transform: translateX(100%);
+
+}
+
+/* ativar o meu menu mobile */
+.menu-mobile.active {
+    transform: translateX(0%);
+}
+
+.menu-mobile
+/* nav */
+.menu-list
+
+/* ul */
+    {
+    display: flex;
+    flex-direction: column;
+    /* EIXO Y = vertical */
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem 1rem 2rem;
+}
+
+.menu-mobile .menu-item {
+    width: 100%;
+    text-align: center;
+}
+
+.menu-mobile .menu-link {
+    padding: 0.5rem 0;
+    display: inline-block;
+    font-size: 1rem;
+
+}
+
+.logo {
+    width: 6rem; /* comprimento  */ /* 16 é a medida do rem */
+    height: ; /* altura */
+}
+
+.header-toggle {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+/* <TAG> -> TAG ( body )
+class ->. ( ponto )
+id -> # ( jogo da velha )
+
+ */
+
+
+
+/*  medidas responsivas */
+@media (min-width:768px) {
+    .menu-desktop {
+        display: flex;
+        min-width: 30%;
+    }
+
+    .bnt-menu-mobile {
+        display: none;
+    }
+
+    .header-toggle {
+        min-width: 30%;
+    }
+
+
+
 }
