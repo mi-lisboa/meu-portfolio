@@ -159,7 +159,13 @@ header {
     justify-content: flex-end;
     align-items: center;
 
+
 }
+
+#home {
+    padding: 3.5rem 1rem;
+}
+
 /* <TAG> -> TAG ( body )
 class ->. ( ponto )
 id -> # ( jogo da velha )
