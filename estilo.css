@@ -1,73 +1,87 @@
-/*  CSS Externo*/
+/* CSS Externo */
 
-
-/* defenir  as cores tena dark */
+/* Definir as cores Tema Dark */
 /* raiz */
 :root,
 :root[data-theme='dark'] {
     --cor-fundo: black;
     --cor-texto: pink;
-    --cor-borda: rgb(253, 242, 242);
+    --menu-link: rgb(120, 119, 120);
 
-    --menu-link: rgb(151, 10, 109);
+    --cor-borda: rgb(253, 242,242);;
+    
 }
-
+/* Fundo Branco */
 :root[data-theme='light'] {
-    --cor-fundo: pink;
-    --cor-texto: black;
-    --cor-borda: rgb(253, 242, 242);
-    --menu-link: rgb(243, 109, 198);
+    --cor-fundo: rgb(255, 193, 204);
+    --cor-texto: rgb(8, 8, 8);
+    --menu-link: rgb(17, 16, 17);
 
 
+    --cor-borda: rgb(253,242,242);
+ 
 }
+
+/* Inverter Cor LOGO = Filtro */
+html[data-theme='light'] .logo {
+    filter: invert(1);
+}
+
+
+
+/* Reset CSS = Padronizar */
+/* Seletor Universal */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+
 
 body {
-    background: var(--cor-fundo);
-    /* cor fundo */
-    color: var(--cor-texto);
-    /* cor textos  */
+    background: var(--cor-fundo); /* cor fundo */
+    color: var(--cor-texto); /* cor TEXTOS */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 a {
-    color: var(--menu-link);
-    text-decoration: none;
+   color: var(--menu-link);
+   text-decoration: none;
 }
 
 ul {
-    list-style: none;
-    /* estiço de lista */
+    list-style: none;  /* Estilo de Lista */
 }
-
 
 header {
     display: flex;
     justify-content: space-between;
-    align-self: center;
+    align-items: center;
     width: 100%;
-    background: rgb(116, 89, 93);
-    border-bottom: 5px solid rgb(247, 239, 247);
-
+    background: rgb(20, 20, 20);
+    border-bottom: 5px solid rgb(247,239,247);
+    position: fixed; /* Voltar */
+    z-index: 9999; /* Camadas */
+    padding: .5rem 1rem;
 }
 
 .menu-desktop {
-    background: rgba(141, 51, 153, 0.233);
+    background: rgba(34, 33, 34, 0.233);
     display: none;
     /* esconde o menu desktop */
+
 }
 
-/* NAV  UL// OL */
-
-.menu {
-    display: flex;
-    /* em linha // horizontal  */
-    gap: 2rem;
-    /* 16px */
+/* NAV = UL // OL */
+.menu  {
+    display: flex; /* em linha // horizontal */
+    gap: 1rem; /* 16px */
     align-items: center;
 }
 
-/* LI-listas */
-.menu-item {
+/* LI = listas */
+.menu-item { 
     width: 100%;
 }
 
@@ -78,11 +92,13 @@ header {
 
 .menu-text {
     color: var(--menu-link);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
 }
 
-/* ----Menu hamburguer botao menu mobile----- */
+/*--- Menu Hamburger
+botao menu mobile  ----- */
+
 #menuHamburger {
     margin-left: 1rem;
 }
@@ -94,50 +110,42 @@ header {
     color: var(--cor-texto);
     display: flex;
     font-size: 1.8rem;
+    align-items: center;
     justify-content: center;
     padding: 0.5rem;
 }
 
-.menu-mobile {
-    /* NAV */
+.menu-mobile {  /* NAV */
     position: fixed;
     top: 0;
     right: 0;
     background: var(--cor-fundo);
     width: 75%;
-    height: 100vh;
-    /* viewPort Altura */
+    height: 100vh; /* viewPort Altura */
     border-left: 1px solid var(--cor-borda);
     max-width: 320px;
     display: flex;
     flex-direction: column;
     padding-top: 4rem;
-    transition: .3s ease-in-out;
-    /* volta aqui */
+    transition: .3s ease-in-out; /* voltar aqui */
     transform: translateX(100%);
-
 }
 
-/* ativar o meu menu mobile */
+/* Ativar o Menu Mobile */
 .menu-mobile.active {
     transform: translateX(0%);
 }
 
-.menu-mobile
-/* nav */
-.menu-list
-
-/* ul */
-    {
+.menu-mobile /* nav */
+.menu-list  /* UL */ {  
     display: flex;
-    flex-direction: column;
-    /* EIXO Y = vertical */
+    flex-direction: column; /* EIXO Y = Vertical */
     gap: 1rem;
     width: 100%;
     padding: 1rem 1rem 2rem;
 }
 
-.menu-mobile .menu-item {
+.menu-mobile .menu-item  {
     width: 100%;
     text-align: center;
 }
@@ -146,49 +154,70 @@ header {
     padding: 0.5rem 0;
     display: inline-block;
     font-size: 1rem;
-
 }
 
 .logo {
-    width: 6rem; /* comprimento  */ /* 16 é a medida do rem */
-    height: ; /* altura */
+    width: 3.25rem; /* comprimento */
+    height: auto; /* altura */
 }
 
 .header-toggle {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-
-
 }
 
 #home {
     padding: 3.5rem 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
-/* <TAG> -> TAG ( body )
-class ->. ( ponto )
-id -> # ( jogo da velha )
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
 
- */
+h1 {
+    font-size: 2.5rem;
+}
 
+/* Medidas Responsivas */
+@media (min-width: 768px) {
 
-
-/*  medidas responsivas */
-@media (min-width:768px) {
     .menu-desktop {
         display: flex;
-        min-width: 30%;
+        min-width: 30%; /* alinhar o logo */
     }
-
-    .bnt-menu-mobile {
+    .btn-menu-mobile {
         display: none;
     }
-
     .header-toggle {
-        min-width: 30%;
+        min-width: 30%; /* alinhar o logo */
     }
 
+    header {
+        padding: 1rem 6rem;
+    }
 
+    h1 {
+        font-size: 5rem;
+    }
+    #home {
+        padding: 8rem 6rem 4rem 6rem ;
+    }
 
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+} /* fim min 768px */
+
+@media ( min-width: 1400px) {
+    h1 {
+        font-size: 6.5rem;
+    }
 }
