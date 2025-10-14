@@ -234,6 +234,8 @@ h1 {
 
 }
 
+
+
 .servicos {
     display: flex;
     flex-direction: column;
@@ -256,6 +258,21 @@ h1 {
 .img-card {
     width: 100%;
     border-radius: .5rem;
+}
+
+.card-body {
+    display: flex;
+    flex-direction:column ;
+    justify-content:flex-start ;
+    align-items:flex-start ;
+    gap: 1rem ;
+}
+
+.card-title {
+    color:/* cor do texto */ ;
+ font-size: ;/* tamanho do texto */ 
+ font-weight: ; /* largura */
+ font-family: ; /* estilo das letras */
 }
 
 
@@ -312,7 +329,13 @@ h1 {
     }
 
     .img-card2 {
-        width: 35%;
+        /* tamanho das fotos */
+        width: 50%;
+    }
+
+    .reverse-card {
+        /* espelhar */
+        flex-direction: row-reverse;
     }
 
 }
