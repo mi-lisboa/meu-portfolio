@@ -1,3 +1,5 @@
+/* google fotos */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans+Bhaiksuki&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 /* CSS Externo */
 
 /* Definir as cores Tema Dark */
@@ -201,7 +203,25 @@ botao menu mobile  ----- */
 
 h1 {
     font-size: 2.5rem;
+    font-family: "Mulish", sans-serif;
 }
+
+h2 {
+    font-family:"Noto Serif", serif; 
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1.55rem;
+    font-family: "Mulish", sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
 
 .video iframe {
     aspect-ratio: 16/9;
@@ -268,15 +288,39 @@ h1 {
     gap: 1rem ;
 }
 
-.card-title {
-    color:/* cor do texto */ ;
- font-size: ;/* tamanho do texto */ 
- font-weight: ; /* largura */
- font-family: ; /* estilo das letras */
+/* H3 */
+.card-titulo {
+    color: var(--cor-texto); /* cor do texto */
+    font-size: 2rem; /* tamanho do texto */
+    font-weight: 400; /* largura */
+    font-family: "Mulish", sans-serif; /* estilo das fontes */
+}
+
+.card-descricao {
+     color: var(--cor-texto); /* cor do texto */
+    font-size: 2rem; /* tamanho do texto */
+    font-weight: ; /* largura */
+    font-family: "Noto Serif", serif; 
+}
+
+.card-item {
+    margin-bottom: .8rem;
+}
+
+.card-item i {
+    margin-right: 8px;
 }
 
 
 /* Medidas Responsivas */
+/* telas ate 768 */
+
+@media (max-width: 768px) {
+    #home {
+        padding-top: 6rem;
+    }
+}
+
 @media (min-width: 768px) {
 
     .menu-desktop {
@@ -339,6 +383,7 @@ h1 {
     }
 
 }
+
 
 
 @media (min-width: 1400px) {
