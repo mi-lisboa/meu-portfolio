@@ -41,7 +41,11 @@ html[data-theme='light'] .logo {
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior:smooth ;
+    
 
+}
 
 body {
     background: var(--cor-fundo);
