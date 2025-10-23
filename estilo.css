@@ -8,22 +8,23 @@
 :root[data-theme='dark'] {
     --cor-fundo: black;
     --cor-texto: pink;
-    --menu-link: rgb(120, 119, 120);
+    --menu-link: rgb(215, 3, 215);
 
     --cor-borda: rgb(253, 242, 242);
     ;
-
+     --cor-hover-icone:  rgb(43, 3, 50);
 }
 
 /* Fundo Branco */
 :root[data-theme='light'] {
     --cor-fundo: rgb(255, 193, 204);
     --cor-texto: rgb(8, 8, 8);
-    --menu-link: rgb(120, 119, 120);
+    --menu-link: rgb(202, 112, 202);
 
 
     --cor-borda: rgb(253, 242, 242);
-
+    
+    --cor-hover-icone:  rgb(237, 14, 14);
 }
 
 /* Inverter Cor LOGO = Filtro */
@@ -43,7 +44,7 @@ html[data-theme='light'] .logo {
 
 html {
     scroll-behavior:smooth ;
-    
+
 
 }
 
@@ -70,8 +71,8 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background: rgb(20, 20, 20);
-    border-bottom: 5px solid rgb(247, 239, 247);
+    background: rgb(81, 80, 80);
+    border-bottom: 5px solid rgb(75, 70, 75);
     position: fixed;
     /* Voltar */
     z-index: 9999;
@@ -303,7 +304,7 @@ h3 {
 .card-descricao {
      color: var(--cor-texto); /* cor do texto */
     font-size: 2rem; /* tamanho do texto */
-    font-weight: ; /* largura */
+    font-weight:400 ; /* largura */
     font-family: "Noto Serif", serif; 
 }
 
@@ -315,6 +316,53 @@ h3 {
     margin-right: 8px;
 }
 
+.card-item i:hover {
+    color: var(--cor-hover-icone);
+    transition: .5 s ease-in-out;
+}
+
+.redes-sociais {
+    font-size:1.4rem;
+}
+
+.redes-sociais i:hover {
+    color: var(--cor-hover-icone);
+}
+
+.redes-sociais .whatsapp {
+    color: #07d434;
+    font-size: 2rem;
+}
+
+.redes-sociais .whatsapp:hover {
+    color: rgb(161, 230, 153);
+}
+
+.redes-sociais .github {
+    color: rgb(247, 243, 243);
+    font-size: 2rem;
+}
+
+.redes-sociais .github:hover {
+    color: var(--cor-hover-icone);
+}
+
+.redes-sociais .instagram {
+    color: rgb(254, 122, 144);
+    font-size: 2rem;
+}
+
+.redes-sociais .instagram:hover {
+    color: violet;
+}
+ .redes-sociais .tiktok {
+    color: aliceblue;
+    font-size: 2rem;
+ }
+
+ .redes-sociais .tiktok:hover {
+    color: var(--cor-hover-icone);
+ }
 
 /* Medidas Responsivas */
 /* telas ate 768 */
